@@ -1,0 +1,17 @@
+-- Table: public.Categories
+
+-- DROP TABLE IF EXISTS public."Categories";
+
+CREATE TABLE IF NOT EXISTS public."Categories"
+(
+    categoryid integer NOT NULL DEFAULT nextval('categories_categoryid_seq'::regclass),
+    categoryname character varying(100) COLLATE pg_catalog."default" NOT NULL,
+    categorytype character varying(20) COLLATE pg_catalog."default" NOT NULL,
+    CONSTRAINT categories_pkey PRIMARY KEY (categoryid),
+    CONSTRAINT categories_categorytype_check CHECK (categorytype::text = ANY (ARRAY['Income'::character varying, 'Expense'::character varying]::text[]))
+)
+
+TABLESPACE pg_default;
+
+ALTER TABLE IF EXISTS public."Categories"
+    OWNER to postgres;
