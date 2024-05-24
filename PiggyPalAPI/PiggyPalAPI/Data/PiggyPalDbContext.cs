@@ -24,5 +24,6 @@ namespace PiggyPalAPI.Data
         //For example, if you have a Purchase model, you would add a DbSet property like this:
         //public DbSet<Purchase> Purchases { get; set; }
         public DbSet<CategoryModel> Categories { get; set; }
+        public DbSet<TransactionModel> Transactions { get; set; }
     }
 }

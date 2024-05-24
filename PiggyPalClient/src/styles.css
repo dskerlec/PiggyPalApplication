@@ -1,1 +1,40 @@
 /* You can add global styles to this file, and also import other style files */
+:root {
+    /** CSS DARK THEME PRIMARY COLORS */
+    --color-primary-100: #f52c6f;
+    --color-primary-200: #fa517e;
+    --color-primary-300: #fd6c8d;
+    --color-primary-400: #ff839c;
+    --color-primary-500: #ff99ac;
+    --color-primary-600: #ffaebc;
+
+    /** CSS DARK THEME SURFACE COLORS */
+    /* --color-surface-100: #1a1a1a;
+    --color-surface-200: #2f2f2f;
+    --color-surface-300: #454545;
+    --color-surface-400: #5d5d5d;
+    --color-surface-500: #767676;
+    --color-surface-600: #909090; */
+    --body-background: #1a1a1a;
+    --card-background: #2f2f2f;
+    --chip-background: #454545;
+    --navbar-background: #5d5d5d;
+    --modal-background: #767676;
+    --background-text: #909090;
+
+}
+
+body {
+    color: white;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.app-container {
+    background-color: var(--body-background);
+  }
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

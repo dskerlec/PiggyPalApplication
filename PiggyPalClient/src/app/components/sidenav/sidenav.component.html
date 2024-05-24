@@ -1,0 +1,17 @@
+<mat-sidenav-container class="sidenav-container">
+    <mat-sidenav #sidenav class="sidenav" opened mode="side" [disableClose]="true">
+        <h2>Piggy Pal</h2>
+        <button class="logo">
+            <i class="material-icons logo-pig">savings</i>
+          </button>
+        <hr>
+        <ul>
+          <li><a routerLink="/">Home</a></li>
+          <li><a routerLink="/about">About</a></li>
+          <!-- Add more navigation links as needed -->
+        </ul>
+      </mat-sidenav>
+    <mat-sidenav-content class="content">
+            <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

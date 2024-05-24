@@ -1,0 +1,42 @@
+/* .app-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--navbar-background);
+    color: white;
+    padding: 10px 20px;
+  }
+  
+  .left-section {
+    flex: 1;
+  }
+  
+  .right-section {
+    display: flex;
+  }
+  
+  .site-title {
+    font-size: 1.5rem;
+  }
+  
+  .notification-button,
+  .profile-button, .golf-button, .logo {
+    background: none;
+    border: none;
+    color: var(--color-primary-500);
+    cursor: pointer;
+    font-size: 1.2rem;
+  }
+
+  .notification-button, .profile-button, .golf-button {
+    margin-left: 20px;
+  }
+
+  .logo {
+    margin-left: 10px;
+  }
+  
+  .notification-button:hover,
+  .profile-button:hover, .golf-button:hover {
+    color: white;
+  } */
