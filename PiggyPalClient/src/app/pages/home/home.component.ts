@@ -14,6 +14,8 @@ export class HomeComponent {
   categories$: Observable<ICategory[]>;
   transactions$: Observable<ITransaction[]>;
 
+  currentYear: number = new Date().getFullYear();
+
   constructor(_categoryService: CategoryService, _transactionService: TransactionService) {
     this.categories$= _categoryService.getCategories();
     this.transactions$ = _transactionService.getTransactions();

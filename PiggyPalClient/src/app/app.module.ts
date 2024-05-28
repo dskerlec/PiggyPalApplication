@@ -10,6 +10,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
+import { ActionsComponent } from './components/actions/actions.component';
+import { NavChipsComponent } from './components/nav-chips/nav-chips.component';
 
 
 
@@ -19,14 +21,16 @@ import { SidenavComponent } from './components/sidenav/sidenav.component';
     HomeComponent,
     HeaderComponent,
     FooterComponent,
-    SidenavComponent
+    SidenavComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     MatSidenavModule,
-    BrowserAnimationsModule
+    BrowserAnimationsModule,
+    ActionsComponent,
+    NavChipsComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

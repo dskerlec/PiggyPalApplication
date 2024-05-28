@@ -1,18 +1,31 @@
-<!-- <ul>
-  <li *ngFor="let category of categories$ | async">
-    {{ category | json }}
-  </li>
-</ul> -->
-<select>
-  <option value="" disabled selected>Select Category</option>
-  <option *ngFor="let category of categories$ | async" [value]="category.categoryId">{{ category.categoryName }}</option>
-</select>
-
-<div>
-  <h2>Transactions</h2>
-  <ul>
-    <li *ngFor="let transaction of transactions$ | async">
-      {{ transaction.transactionDate }} - ${{ transaction.transactionAmount }} - {{ transaction.transactionDescription }} - {{ transaction.categoryId }}
-    </li>
-  </ul>
+<div class="container" id="home-container">
+    <h3>{{ currentYear }} </h3>
+    <h1>Dashboard</h1>
+    <hr>
+    <div id="nav-chips-container">
+        <div class="row">
+            <div class="col-2">
+                <app-nav-chips class="active" [chipName]="'Quick Actions'"></app-nav-chips>
+            </div>
+            <div class="col-2">
+                <app-nav-chips [chipName]="'Update Budget'"></app-nav-chips>
+            </div>
+            <div class="col-2">
+                <app-nav-chips [chipName]="'View Summary'"></app-nav-chips>
+            </div>
+        </div>
+    </div>
+    <div id="actions-container">
+        <div class="row">
+            <div class="col">
+                <app-actions [actionName]="'Add a transaction'" [iconName]="'add_shopping_cart'"></app-actions>
+            </div>
+            <div class="col">
+                <app-actions [actionName]="'Find a transaction'" [iconName]="'search'"></app-actions>
+            </div>
+            <div class="col">
+                <app-actions [actionName]="'Action 3'" [iconName]="'paid'"></app-actions>
+            </div>
+        </div>
+    </div>
 </div>

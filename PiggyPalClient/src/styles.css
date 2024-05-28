@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import "~bootstrap/dist/css/bootstrap-reboot.css";
+@import "~bootstrap/dist/css/bootstrap-grid.css";
+
 :root {
     /** CSS DARK THEME PRIMARY COLORS */
     --color-primary-100: #f52c6f;
@@ -24,17 +27,47 @@
 
 }
 
+html, body { height: 100%; }
+
+html {
+    font-size: 16px;
+}
+
 body {
     color: white;
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
 }
 
 * {
     margin: 0;
     padding: 0;
 }
+  
+/* Heading Styles */
+h1 {
+  font-size: 2.5em; /* 40px */
+}
 
+h2 {
+  font-size: 2em; /* 32px */
+}
+
+h3 {
+  font-size: 1.75em; /* 28px */
+}
+
+h4 {
+  font-size: 1.5em; /* 24px */
+}
+
+h5 {
+  font-size: 1.25em; /* 20px */
+}
+
+h6 {
+  font-size: 1em; /* 16px */
+}
 .app-container {
     background-color: var(--body-background);
   }
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
