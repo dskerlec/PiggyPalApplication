@@ -1,0 +1,5 @@
+<h6 class="form-note">* All fields are required.</h6>
+<form [formGroup]="transactionForm" (ngSubmit)="onSubmit()" class="transaction-form">
+  <app-transaction-form [formGroup]="transactionForm"></app-transaction-form>
+  <button type="submit" [disabled]="transactionForm.invalid" class="btn btn-primary">Add Transaction</button>
+</form>

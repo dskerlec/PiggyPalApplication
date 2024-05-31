@@ -12,13 +12,14 @@ import { FooterComponent } from './components/footer/footer.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
 import { ActionsComponent } from './components/actions/actions.component';
 import { NavChipsComponent } from './components/nav-chips/nav-chips.component';
+import { QuickAddFormComponent } from './components/quick-add-form/quick-add-form.component';
+import { FindFormComponent } from './components/find-form/find-form.component';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    HomeComponent,
     HeaderComponent,
     FooterComponent,
     SidenavComponent,
@@ -29,8 +30,7 @@ import { NavChipsComponent } from './components/nav-chips/nav-chips.component';
     HttpClientModule,
     MatSidenavModule,
     BrowserAnimationsModule,
-    ActionsComponent,
-    NavChipsComponent,
+    HomeComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

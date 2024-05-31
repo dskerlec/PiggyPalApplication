@@ -44,6 +44,27 @@ namespace PiggyPalAPI.Repositories
             return await _context.Transactions.FindAsync(id) ?? throw new Exception("Transaction not found");
         }
 
+        public async Task<IEnumerable<TransactionModel>> GetByDate(DateOnly date)
+        {
+            return await _context.Transactions.Where(t => t.TransactionDate == date).ToListAsync() ?? throw new Exception("Transaction not found");
+        }
+
+        public async Task<IEnumerable<TransactionModel>> GetByAmount(decimal amount)
+        {
+            return await _context.Transactions.Where(t => t.TransactionAmount == amount).ToListAsync() ?? throw new Exception("Transaction not found");
+        }
+
+        public async Task<IEnumerable<TransactionModel>> GetByCategory(int categoryId)
+        {
+            return await _context.Transactions.Where(t => t.CategoryId == categoryId).ToListAsync() ?? throw new Exception("Transaction not found");
+        }
+
+
+        public async Task<IEnumerable<TransactionModel>> GetByDescription(string description)
+        {
+            return await _context.Transactions.Where(t => t.TransactionDescription.Contains(description)).ToListAsync() ?? throw new Exception("Transaction not found");
+        }
+
         public async Task Update(TransactionModel transaction)
         {
             _context.Transactions.Update(transaction);

@@ -18,10 +18,10 @@
     <div id="actions-container">
         <div class="row">
             <div class="col">
-                <app-actions [actionName]="'Add a transaction'" [iconName]="'add_shopping_cart'"></app-actions>
+                <app-actions [actionName]="'Add a transaction'" [iconName]="'add_shopping_cart'"><app-quick-add-form></app-quick-add-form></app-actions>
             </div>
             <div class="col">
-                <app-actions [actionName]="'Find a transaction'" [iconName]="'search'"></app-actions>
+                <app-actions [actionName]="'Find a transaction'" [iconName]="'search'"><app-find-form></app-find-form></app-actions>
             </div>
             <div class="col">
                 <app-actions [actionName]="'Action 3'" [iconName]="'paid'"></app-actions>

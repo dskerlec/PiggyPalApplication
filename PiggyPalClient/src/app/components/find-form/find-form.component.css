@@ -1,0 +1,37 @@
+.form-note {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  font-weight: bold;
+  text-align: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s, border-color 0.3s, box-shadow 0.3s;
+}
+
+.btn-primary {
+  color: black;
+  background-color: var(--color-primary-500);
+  border: 1px solid var(--color-primary-500);
+  border-radius: 50px;
+}
+
+.btn-primary:disabled {
+  background-color: #cccccc;
+  border-color: #cccccc;
+  cursor: not-allowed;
+}
+
+.btn-primary:hover:not(:disabled) {
+  background-color: var(--color-primary-200);
+  border-color: var(--color-primary-200);
+}
+
+.btn-primary:focus:not(:disabled) {
+  box-shadow: 0 0 5px var(--color-primary-500);
+}

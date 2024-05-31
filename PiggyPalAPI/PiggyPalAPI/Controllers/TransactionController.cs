@@ -28,6 +28,41 @@ namespace PiggyPalAPI.Controllers
             return transaction == null ? NotFound() : Ok(transaction);
         }
 
+        [HttpGet("byDate/{date}")]
+        public async Task<ActionResult<IEnumerable<TransactionModel>>> GetByDate(DateOnly date)
+        {
+            var transactions = await _transactionRepository.GetByDate(date);
+            return transactions == null || !transactions.Any() ? NotFound() : Ok(transactions);
+        }
+
+        [HttpGet("byAmount/{amount}")]
+        public async Task<ActionResult<IEnumerable<TransactionModel>>> GetByAmount(decimal amount)
+        {
+            var transactions = await _transactionRepository.GetByAmount(amount);
+            return transactions == null || !transactions.Any() ? NotFound() : Ok(transactions);
+        }
+
+        [HttpGet("byCategory/{categoryId}")]
+        public async Task<ActionResult<IEnumerable<TransactionModel>>> GetByCategory(int categoryId)
+        {
+            var transactions = await _transactionRepository.GetByCategory(categoryId);
+            return transactions == null || !transactions.Any() ? NotFound() : Ok(transactions);
+        }
+
+        [HttpGet("byCategory/{categoryName}")]
+        public async Task<ActionResult<IEnumerable<TransactionModel>>> GetByCategoryName(int categoryId)
+        {
+            var transactions = await _transactionRepository.GetByCategory(categoryId);
+            return transactions == null || !transactions.Any() ? NotFound() : Ok(transactions);
+        }
+
+        [HttpGet("byDescription/{description}")]
+        public async Task<ActionResult<IEnumerable<TransactionModel>>> GetByDescription(string description)
+        {
+            var transactions = await _transactionRepository.GetByDescription(description);
+            return transactions == null || !transactions.Any() ? NotFound() : Ok(transactions);
+        }
+
         [HttpPut("{id}")]
         public async Task<IActionResult> Update(int id, TransactionModel transaction)
         {

@@ -1,0 +1,5 @@
+<h6 class="form-note">Search by one or more fields!</h6>
+<form [formGroup]="searchForm" (ngSubmit)="onSearch()" class="transaction-form">
+    <app-transaction-form [formGroup]="searchForm"></app-transaction-form>
+    <button type="submit" class="btn btn-primary">Find Transaction</button>
+</form>
