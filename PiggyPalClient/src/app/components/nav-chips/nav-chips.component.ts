@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
 
 @Component({
@@ -10,5 +10,9 @@ import { MatCardModule } from '@angular/material/card';
 })
 export class NavChipsComponent {
   @Input() chipName = '';
+  @Output() chipClicked = new EventEmitter<void>();
 
+  onChipClicked() {
+    this.chipClicked.emit();
+  }
 }

@@ -10,10 +10,7 @@ import { HomeComponent } from './pages/home/home.component';
 import { HeaderComponent } from './components/header/header.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
-import { ActionsComponent } from './components/actions/actions.component';
-import { NavChipsComponent } from './components/nav-chips/nav-chips.component';
-import { QuickAddFormComponent } from './components/quick-add-form/quick-add-form.component';
-import { FindFormComponent } from './components/find-form/find-form.component';
+import { SummaryComponent } from './pages/summary/summary.component';
 
 
 
@@ -31,6 +28,7 @@ import { FindFormComponent } from './components/find-form/find-form.component';
     MatSidenavModule,
     BrowserAnimationsModule,
     HomeComponent,
+    SummaryComponent,
   ],
   providers: [],
   bootstrap: [AppComponent]

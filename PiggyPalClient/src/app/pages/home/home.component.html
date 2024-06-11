@@ -11,7 +11,7 @@
                 <app-nav-chips [chipName]="'Update Budget'"></app-nav-chips>
             </div>
             <div class="col-2">
-                <app-nav-chips [chipName]="'View Summary'"></app-nav-chips>
+                <app-nav-chips [chipName]="'View Summary'" (chipClicked)="navigateToSummary()"></app-nav-chips>
             </div>
         </div>
     </div>

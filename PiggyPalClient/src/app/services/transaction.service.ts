@@ -2,7 +2,8 @@ import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { environment } from 'src/environments/environment';
 import { ITransaction } from '../interfaces/transaction.interface';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
+import { getCategoryName } from '../utils/category-utils';
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,14 @@ export class TransactionService {
   constructor(private _http: HttpClient) { }
 
   getTransactions(): Observable<ITransaction[]> {
-    return this._http.get<ITransaction[]>(`${this.apiUrl}/`);
+    return this._http.get<ITransaction[]>(`${this.apiUrl}/`).pipe(
+      map((transactions: ITransaction[]) => // translate category ID to category name
+        transactions.map((transaction) => ({
+          ...transaction,
+          categoryName: getCategoryName(transaction.categoryId)
+        }))
+      )
+    );
   }
 
   getTransaction(id: number): Observable<ITransaction> {
